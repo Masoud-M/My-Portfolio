@@ -1,10 +1,21 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Contact = () => {
   return (
     <div id="contact" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-      <h1 className="py-4 text-4xl text-bold  text-center text-[#001b5e]">
-        Contact
+      <h1 className="py-4 text-4xl text-bold  text-center text-orange-500">
+        <TypeAnimation
+          sequence={["Contact", 1000, " ", 1000]}
+          wrapper="span"
+          cursor={true}
+          repeat={Infinity}
+          style={{
+            fontSize: "1em",
+            display: "inline-block",
+            paddingLeft: "5px",
+          }}
+        />
       </h1>
       <form
         action="https://getform.io/f/32ad80e6-3f6d-410f-8727-76a999806fcf"
@@ -13,7 +24,7 @@ const Contact = () => {
       >
         <div className="grid md:grid-cols-2 gap-4 w-full py-2">
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2">Name</label>
+            <label className="uppercase text-sm py-2 text-gray-300">Name</label>
             <input
               className="border-2  rounded-lg p-3 flex border-gray-300"
               type="text"
@@ -21,7 +32,9 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2">Phone</label>
+            <label className="uppercase text-sm py-2 text-gray-300">
+              Phone
+            </label>
             <input
               className="border-2  rounded-lg p-3 flex border-gray-300"
               type="text"
@@ -30,7 +43,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Email</label>
+          <label className="uppercase text-sm py-2 text-gray-300">Email</label>
           <input
             className="border-2  rounded-lg p-3 flex border-gray-300"
             type="email"
@@ -38,7 +51,9 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Subject</label>
+          <label className="uppercase text-sm py-2 text-gray-300">
+            Subject
+          </label>
           <input
             className="border-2  rounded-lg p-3 flex border-gray-300"
             type="text"
@@ -46,14 +61,16 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col py-2 ">
-          <label className="uppercase text-sm py-2">Message</label>
+          <label className="uppercase text-sm py-2 text-gray-300">
+            Message
+          </label>
           <textarea
             className="border-2 rounded-lg  p-3 border-gray-300"
             name="message"
             rows="10"
           ></textarea>
         </div>
-        <button className="bg-[#001b5e] text-gray-100 mt-4 w-full p-4 rounded-lg">
+        <button className="bg-orange-500 text-gray-100 mt-4 w-full p-4 rounded-lg">
           Send Message
         </button>
       </form>
