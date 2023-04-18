@@ -4,6 +4,12 @@ import { TypeAnimation } from "react-type-animation";
 const Contact = () => {
   return (
     <div id="contact" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
+      <p className="text-2xl text-gray-500 self-start pl-2">
+        &emsp;&#60;div&#62;
+      </p>
+      <p className="text-2xl text-gray-500 self-start pl-2">
+        &emsp;&emsp;&#60;h1&#62;
+      </p>
       <h1 className="py-4 text-4xl text-bold  text-center text-orange-500">
         <TypeAnimation
           sequence={["Contact", 1000, " ", 1000]}
@@ -17,6 +23,12 @@ const Contact = () => {
           }}
         />
       </h1>
+      <p className="text-2xl text-gray-500 self-start pl-2">
+        &emsp;&emsp;&#60;&#47;h1&#62;
+      </p>
+      <p className="text-2xl text-gray-500 self-start pl-2">
+        &emsp;&emsp;&#60;form&#62;
+      </p>
       <form
         action="https://getform.io/f/32ad80e6-3f6d-410f-8727-76a999806fcf"
         method="POST"
@@ -74,6 +86,12 @@ const Contact = () => {
           Send Message
         </button>
       </form>
+      <p className="text-2xl text-gray-500 self-start pl-2">
+        &emsp;&#60;&#47;form&#62;
+      </p>
+      <p className="text-2xl text-gray-500 self-start pl-2">
+        &#60;&#47;div&#62;
+      </p>
     </div>
   );
 };
