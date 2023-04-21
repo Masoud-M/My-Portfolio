@@ -5,21 +5,27 @@ import { TypeAnimation } from "react-type-animation";
 const Main = () => {
   return (
     <div id="main">
-      <img className="w-full h-screen object-cover " src={MyImg} alt="/" />
-      <div className="w-full h-screen absolute top-0 left-0 bg-white/50">
-        <div className=" max-w-[700px]  m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
-          <h1 className="sm:text-5xl text-4xl font-bold text-gray-800">
+      <div>
+        <div className=" max-w-[700px]  m-auto h-screen w-full flex flex-col justify-center items-center">
+          <p className="text-2xl text-gray-500 self-start pl-2">
+            &emsp;&#60;div&#62;
+          </p>
+          <p className="text-2xl text-gray-500 self-start pl-2">
+            &emsp;&emsp;&#60;h1&#62;
+          </p>
+          <h1 className="sm:text-5xl text-4xl font-bold   text-gray-300">
             I'm Masoud
           </h1>
-          <h2 className="flex sm:text-3xl text-2xl pt-4 text-gray-800">
+          <p className="text-2xl text-gray-500 self-start pl-2">
+            &emsp;&emsp;&#60;&#47;h1&#62;
+          </p>
+          <p className="text-2xl text-gray-500 self-start pl-2">
+            &emsp;&emsp;&#60;h2&#62;
+          </p>
+          <h2 className="flex sm:text-3xl text-2xl pt-4 text-orange-500">
             I'm a
             <TypeAnimation
-              sequence={[
-                "Front-end Developer", // Types 'One'
-                2000, // Waits 1s
-                "Tech Enthusiat", // Deletes 'One' and types 'Two'
-                2000, // Waits 2s
-              ]}
+              sequence={["Front-end Developer", 2000, "Tech Enthusiat", 2000]}
               wrapper="span"
               cursor={true}
               repeat={Infinity}
@@ -30,6 +36,12 @@ const Main = () => {
               }}
             />
           </h2>
+          <p className="text-2xl text-gray-500 self-start pl-2">
+            &emsp;&emsp;&#60;&#47;h2&#62;
+          </p>
+          <p className="text-2xl text-gray-500 self-start pl-2">
+            &emsp;&#60;&#47;div&#62;
+          </p>
         </div>
       </div>
     </div>
