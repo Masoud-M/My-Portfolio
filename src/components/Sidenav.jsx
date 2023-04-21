@@ -26,7 +26,13 @@ const Sidenav = () => {
         className="fixed top-4 right-4 z-[99] md:hidden"
       />
       {nav ? (
-        <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">
+        <div
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="500"
+          className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20"
+        >
           <a
             onClick={handleNav}
             href="#main"
