@@ -14,9 +14,7 @@ const Contact = () => {
       id="contact"
       className="max-w-[1040px] m-auto md:pl-24 p-4 py-16"
     >
-      <p className="text-2xl text-gray-500 self-start pl-2">
-        &emsp;&#60;div&#62;
-      </p>
+      <p className="text-2xl text-gray-500 self-start pl-2">&#60;div&#62;</p>
       <p className="text-2xl text-gray-500 self-start pl-2">
         &emsp;&emsp;&#60;h1&#62;
       </p>
