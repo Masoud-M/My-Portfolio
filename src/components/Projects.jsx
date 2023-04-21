@@ -32,14 +32,15 @@ const Projects = () => {
       <p className="text-2xl text-gray-500 self-start pl-2">
         &emsp;&emsp;&#60;&#47;h1&#62;
       </p>
-
-      <div className=" lg:max-w-lg md:max-w-md max-w-sm flex flex-col  justify-center items-center gap-10">
+      <br />
+      <div className="flex flex-col justify-center p-4 m-4  items-center gap-4">
         <ProjectItem img={ProjectImg} title="Place holder" />
         <ProjectItem img={ProjectImg} title="Place holder" />
         <ProjectItem img={ProjectImg} title="Place holder" />
         <ProjectItem img={ProjectImg} title="Place holder" />
       </div>
       <p className="text-2xl text-gray-500 self-start pl-2">
+        <br />
         &#60;&#47;div&#62;
       </p>
     </div>

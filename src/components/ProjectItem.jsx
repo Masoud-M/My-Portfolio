@@ -2,18 +2,29 @@ import React from "react";
 
 const ProjectItem = ({ img, title }) => {
   return (
-    <div className=" relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-gray-200 to-[#001b5e] ">
-      <img src={img} alt="/" className="rounded-xl group-hover:opacity-10" />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <h3 className="text-2xl font-bold text-white tracking-wider text-center">
-          {title}
-        </h3>
-        <p className="pb-4  pt-2 text-white text-center ">React Js</p>
-        <a href="/">
-          <p className="text-center p-3 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
-            More Info
-          </p>
-        </a>
+    <div className="flex flex-col justify-center md:flex-row p-2 items-center bg-zinc-900">
+      <img className=" sm:max-w-sm  m-4  rounded-xl" src={img} alt="/" />
+
+      <div className=" border-t-2 md:border-t-0 md:border-l-2 border-zinc-700 flex flex-col justify-center p-4 items-center ">
+        <p className="text-3xl text-orange-500  font-bold  mb-2">{title}</p>
+        <p className=" text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo
+          velit voluptatibus incidunt. Vero aperiam laborum nisi perferendis
+          minima laboriosam ipsa velit, repudiandae ratione veritatis. Ad beatae
+          nam ipsa quia!
+        </p>
+        <div className=" px-4 my-4 flex flex-row justify-between">
+          <button className=" hover:scale-110 ease-in duration-150 mx-2 font-bold rounded-md bg-orange-500 w-[120px] height-[20px] px-2 py-1 text-gray-900">
+            Source Code
+          </button>
+          <button className=" hover:scale-110 ease-in duration-150 mx-2 font-bold rounded-md bg-orange-500 w-[120px] height-[20px] px-2 py-1 text-gray-900">
+            Live Site
+          </button>
+        </div>
+        <p className=" font-semibold text-lg text-orange-500">
+          Technologies Used
+        </p>
+        <p className=" text-gray-300">React JS, Tailwind</p>
       </div>
     </div>
   );
