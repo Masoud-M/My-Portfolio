@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MyImg from "../assets/images/background.jpg";
 import { TypeAnimation } from "react-type-animation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Main = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
-    <div id="main">
+    <div data-aos="fade-right" id="main">
       <div>
         <div className=" max-w-[700px]  m-auto h-screen w-full flex flex-col justify-center items-center">
           <p className="text-2xl text-gray-500 self-start pl-2">

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div id="contact" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
+    <div
+      data-aos="zoom-in"
+      id="contact"
+      className="max-w-[1040px] m-auto md:pl-24 p-4 py-16"
+    >
       <p className="text-2xl text-gray-500 self-start pl-2">
         &emsp;&#60;div&#62;
       </p>
@@ -82,7 +92,7 @@ const Contact = () => {
             rows="10"
           ></textarea>
         </div>
-        <button className="bg-orange-500 text-gray-100 mt-4 w-full p-4 rounded-lg">
+        <button className="bg-orange-500 text-gray-900 font-semibold mt-4 w-full p-4 rounded-lg">
           Send Message
         </button>
       </form>

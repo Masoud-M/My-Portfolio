@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AiOutlineMenu,
   AiOutlineHome,
@@ -6,12 +6,18 @@ import {
   AiOutlineGithub,
 } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Sidenav = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div>
@@ -58,7 +64,10 @@ const Sidenav = () => {
         ""
       )}
 
-      <div className="md:block hidden fixed top-[25%] z-10">
+      <div
+        data-aos="fade-right"
+        className="md:block hidden fixed top-[25%] z-10"
+      >
         <div className="flex flex-col ">
           <a
             href="#main"

@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProjectItem = ({ img, title }) => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="flex flex-col justify-center md:flex-row p-2 items-center bg-zinc-900">
+    <div
+      data-aos="zoom-in"
+      className="flex flex-col justify-center md:flex-row p-2 items-center bg-zinc-900"
+    >
       <img className=" sm:max-w-sm  m-4  rounded-xl" src={img} alt="/" />
 
       <div className=" border-t-2 md:border-t-0 md:border-l-2 border-zinc-700 flex flex-col justify-center p-4 items-center ">
