@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import MyImg from "../assets/images/background.jpg";
+import MyImg from "../assets/background.jpg";
 import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css";

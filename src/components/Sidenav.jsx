@@ -97,7 +97,9 @@ const Sidenav = () => {
             <span className="text-[10px]">Contact</span>
           </a>
           <a
-            href="/"
+            href="https://github.com/Masoud-M"
+            target="_blank"
+            rel="noopener noreferrer"
             className=" flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <AiOutlineGithub size={20} />

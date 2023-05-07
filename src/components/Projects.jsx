@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import ProjectImg from "../assets/images/background.jpg";
+import ProjectImg from "../assets/background.jpg";
+import GymImg from "../assets/gym-3-devices-black.png";
 import { TypeAnimation } from "react-type-animation";
 
 const Projects = () => {
@@ -34,10 +35,39 @@ const Projects = () => {
       </p>
       <br />
       <div className="flex flex-col justify-center p-4 m-4  items-center gap-4">
-        <ProjectItem img={ProjectImg} title="Place holder" />
-        <ProjectItem img={ProjectImg} title="Place holder" />
-        <ProjectItem img={ProjectImg} title="Place holder" />
-        <ProjectItem img={ProjectImg} title="Place holder" />
+        <ProjectItem
+          img={ProjectImg}
+          title="Place holder"
+          description=""
+          techStack=""
+          srcLink="#"
+          demo="#"
+        />
+        <ProjectItem
+          img={ProjectImg}
+          title="Place holder"
+          description=""
+          techStack=""
+          srcLink="#"
+          demo="#"
+        />
+        <ProjectItem
+          img={GymImg}
+          title="Gym Website"
+          description="one page static gym website to showcase the diffrent plans. it has hero section, testimonials section and plans section"
+          techStack="React, CSS"
+          srcLink="https://github.com/Masoud-M/gym-website"
+          demo="#"
+        />
+        <ProjectItem
+          img={ProjectImg}
+          title="Ecommerce"
+          description="Ecommerce website to showcase products.
+          it has a hero page, prdoduct page , cart page and checkout page"
+          techStack="React, Tailwind"
+          srcLink="https://github.com/Masoud-M/ecommerce"
+          demo="#"
+        />
       </div>
       <p className="text-2xl text-gray-500 self-start pl-2">
         <br />
