@@ -59,7 +59,9 @@ const Sidenav = () => {
           </a>
           <a
             onClick={handleNav}
-            href="#contact"
+            href="https://github.com/Masoud-M"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineGithub size={20} />
