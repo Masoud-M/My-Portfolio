@@ -36,7 +36,7 @@ const Projects = () => {
       <br />
       <div className="flex flex-col justify-center p-4 m-4  items-center gap-4">
         <ProjectItem
-          img={ProjectImg}
+          img={GymImg}
           title="Place holder"
           description=""
           techStack=""
@@ -44,7 +44,7 @@ const Projects = () => {
           demo="#"
         />
         <ProjectItem
-          img={ProjectImg}
+          img={GymImg}
           title="Place holder"
           description=""
           techStack=""
@@ -60,7 +60,7 @@ const Projects = () => {
           demo="#"
         />
         <ProjectItem
-          img={ProjectImg}
+          img={GymImg}
           title="Ecommerce"
           description="Ecommerce website to showcase products.
           it has a hero page, prdoduct page , cart page and checkout page"
