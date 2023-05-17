@@ -66,7 +66,7 @@ const Projects = () => {
           it has a hero page, prdoduct page , cart page and checkout page"
           techStack="React, Tailwind"
           srcLink="https://github.com/Masoud-M/ecommerce"
-          demo="#"
+          demo="https://timely-haupia-f35fe4.netlify.app/"
         />
       </div>
       <p className="text-2xl text-gray-500 self-start pl-2">
