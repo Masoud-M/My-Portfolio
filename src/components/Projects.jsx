@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import ProjectImg from "../assets/background.jpg";
+import EcommerceImg from "../assets/ecommerce-3-devices-black.png";
 import GymImg from "../assets/gym-3-devices-black.png";
 import { TypeAnimation } from "react-type-animation";
 
@@ -37,22 +37,6 @@ const Projects = () => {
       <div className="flex flex-col justify-center p-4 m-4  items-center gap-4">
         <ProjectItem
           img={GymImg}
-          title="Place holder"
-          description=""
-          techStack=""
-          srcLink="#"
-          demo="#"
-        />
-        <ProjectItem
-          img={GymImg}
-          title="Place holder"
-          description=""
-          techStack=""
-          srcLink="#"
-          demo="#"
-        />
-        <ProjectItem
-          img={GymImg}
           title="Gym Website"
           description="one page static gym website to showcase the diffrent plans. it has hero section, testimonials section and plans section"
           techStack="React, CSS"
@@ -60,7 +44,7 @@ const Projects = () => {
           demo="#"
         />
         <ProjectItem
-          img={GymImg}
+          img={EcommerceImg}
           title="Ecommerce"
           description="Ecommerce website to showcase products.
           it has a hero page, prdoduct page , cart page and checkout page"
