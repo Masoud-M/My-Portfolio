@@ -6,7 +6,7 @@ const ProjectItem = ({ img, title, description, techStack, srcLink, demo }) => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-
+  const arr = techStack;
   return (
     <div
       data-aos="zoom-in"
@@ -32,7 +32,18 @@ const ProjectItem = ({ img, title, description, techStack, srcLink, demo }) => {
         <p className=" font-semibold text-lg text-gray-500">
           Technologies Used
         </p>
-        <p className=" font-semibold text-gray-300">{techStack}</p>
+        <p className=" flex flex-wrap justify-between gap-2 font-semibold text-gray-300">
+          {arr.map((title) => {
+            return (
+              <div
+                className="flex flex-row mt-2 px-2 py-1 bg-zinc-800 items-center justify-center rounded-md"
+                key={title}
+              >
+                {title}
+              </div>
+            );
+          })}
+        </p>
       </div>
     </div>
   );

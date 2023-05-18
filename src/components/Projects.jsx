@@ -39,7 +39,7 @@ const Projects = () => {
           img={GymImg}
           title="Gym Website"
           description="one page static gym website to showcase the diffrent plans. it has hero section, testimonials section and plans section"
-          techStack="React, CSS"
+          techStack={["React", "Tailwind"]}
           srcLink="https://github.com/Masoud-M/gym-website"
           demo="#"
         />
@@ -48,7 +48,7 @@ const Projects = () => {
           title="Ecommerce"
           description="Ecommerce website to showcase products.
           it has a hero page, prdoduct page , cart page and checkout page"
-          techStack="React, Tailwind"
+          techStack={["React", "Tailwind"]}
           srcLink="https://github.com/Masoud-M/ecommerce"
           demo="https://timely-haupia-f35fe4.netlify.app/"
         />
