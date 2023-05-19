@@ -39,9 +39,9 @@ const Projects = () => {
           img={GymImg}
           title="Gym Website"
           description="one page static gym website to showcase the diffrent plans. it has hero section, testimonials section and plans section"
-          techStack={["React", "Tailwind"]}
+          techStack={["React", "CSS"]}
           srcLink="https://github.com/Masoud-M/gym-website"
-          demo="#"
+          demo="https://fitclub-1my.pages.dev/"
         />
         <ProjectItem
           img={EcommerceImg}
