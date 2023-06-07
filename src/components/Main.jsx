@@ -8,45 +8,55 @@ const Main = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+  const secondaryTextStyle = " text-2xl text-gray-500 font-semibold font-sans ";
   return (
     <div data-aos="fade-right" id="main">
-      <div>
-        <div className=" max-w-[700px]  m-auto h-screen w-full flex flex-col justify-center items-center">
-          <p className="text-2xl text-gray-500 self-start pl-2">
-            &emsp;&#60;div&#62;
-          </p>
-          <p className="text-2xl text-gray-500 self-start pl-2">
-            &emsp;&emsp;&#60;h1&#62;
-          </p>
-          <h1 className="sm:text-5xl text-4xl font-bold   text-gray-300">
-            I'm Masoud
-          </h1>
-          <p className="text-2xl text-gray-500 self-start pl-2">
-            &emsp;&emsp;&#60;&#47;h1&#62;
-          </p>
-          <p className="text-2xl text-gray-500 self-start pl-2">
-            &emsp;&emsp;&#60;h2&#62;
-          </p>
-          <h2 className="flex sm:text-3xl text-2xl pt-4 text-orange-500">
-            I'm a
-            <TypeAnimation
-              sequence={["Front-end Developer", 2000, "Tech Enthusiat", 2000]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              style={{
-                fontSize: "1em",
-                display: "inline-block",
-                paddingLeft: "5px",
-              }}
-            />
-          </h2>
-          <p className="text-2xl text-gray-500 self-start pl-2">
-            &emsp;&emsp;&#60;&#47;h2&#62;
-          </p>
-          <p className="text-2xl text-gray-500 self-start pl-2">
-            &emsp;&#60;&#47;div&#62;
-          </p>
+      <div className="w-[90%] lg:w-[65%] mx-auto">
+        <div className="md:ml-[100px]">
+          <div className="flex flex-col justify-center h-screen my-4">
+            <span className={`${secondaryTextStyle}   `}>&#60;div&#62;</span>
+            <div className="my-4">
+              <span className={`${secondaryTextStyle}   `}>
+                &emsp;&#60;h1&#62;
+              </span>
+              <div className="text-center my-4 sm:text-5xl text-4xl font-bold   text-gray-300">
+                I'm Masoud
+              </div>
+              <span className={`${secondaryTextStyle}   `}>
+                &emsp;&#60;&#47;h1&#62;
+              </span>
+            </div>
+            <div className="my-4">
+              <span className={`${secondaryTextStyle}   `}>
+                &emsp;&#60;h2&#62;
+              </span>
+              <div className=" items-center justify-center my-4 flex sm:text-3xl text-2xl text-orange-500">
+                I'm a
+                <TypeAnimation
+                  sequence={[
+                    "Front-end Developer",
+                    2000,
+                    "Tech Enthusiat",
+                    2000,
+                  ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{
+                    fontSize: "1em",
+                    display: "inline-block",
+                    paddingLeft: "5px",
+                  }}
+                />
+              </div>
+              <span className={`${secondaryTextStyle}   `}>
+                &emsp;&#60;&#47;h2&#62;
+              </span>
+            </div>
+            <span className={`${secondaryTextStyle}   `}>
+              &#60;&#47;div&#62;
+            </span>
+          </div>
         </div>
       </div>
     </div>

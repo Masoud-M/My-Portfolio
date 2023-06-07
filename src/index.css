@@ -9,3 +9,8 @@
 body {
   background-color: rgba(0, 0, 0, 0.87);
 }
+
+.image-scroll {
+  transition-property: all;
+  transition-duration: 4000ms;
+}

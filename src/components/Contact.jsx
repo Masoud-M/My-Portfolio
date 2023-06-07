@@ -7,99 +7,89 @@ const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-
+  const secondaryTextStyle = " text-2xl text-gray-500 font-semibold font-sans ";
+  const labelStyle = "uppercase font-semibold text-sm py-2 text-gray-300";
+  const inputStyle =
+    "border-2 bg-zinc-300  rounded-lg p-3 flex border-gray-300";
   return (
-    <div
-      data-aos="zoom-in"
-      id="contact"
-      className="max-w-[1040px] m-auto md:pl-24 p-4 py-16"
-    >
-      <p className="text-2xl text-gray-500 self-start pl-2">&#60;div&#62;</p>
-      <p className="text-2xl text-gray-500 self-start pl-2">
-        &emsp;&emsp;&#60;h1&#62;
-      </p>
-      <h1 className="py-4 text-4xl text-bold  text-center text-orange-500">
-        <TypeAnimation
-          sequence={["Contact", 1000, " ", 1000]}
-          wrapper="span"
-          cursor={true}
-          repeat={Infinity}
-          style={{
-            fontSize: "1em",
-            display: "inline-block",
-            paddingLeft: "5px",
-          }}
-        />
-      </h1>
-      <p className="text-2xl text-gray-500 self-start pl-2">
-        &emsp;&emsp;&#60;&#47;h1&#62;
-      </p>
-      <p className="text-2xl text-gray-500 self-start pl-2">
-        &emsp;&emsp;&#60;form&#62;
-      </p>
-      <form
-        action="https://getform.io/f/32ad80e6-3f6d-410f-8727-76a999806fcf"
-        method="POST"
-        encType="multipart/form-data"
-      >
-        <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-          <div className="flex flex-col">
-            <label className="uppercase text-sm py-2 text-gray-300">Name</label>
-            <input
-              className="border-2  rounded-lg p-3 flex border-gray-300"
-              type="text"
-              name="name"
-            />
+    <div data-aos="zoom-in" id="contact" className="my-[100px]">
+      <div className="w-[90%] lg:w-[65%] mx-auto">
+        <div className="md:pl-[100px]">
+          <div className="flex flex-col my-4">
+            <span className={`${secondaryTextStyle}  mb-4 `}>
+              &#60;div&#62;
+            </span>
+            <div className="my-4">
+              <span className={`${secondaryTextStyle}   `}>
+                &emsp;&#60;h1&#62;
+              </span>
+              <div className=" items-center justify-center my-4 flex sm:text-5xl text-4xl font-bold text-orange-500">
+                <TypeAnimation
+                  sequence={["Contact", 1000, " ", 1000]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{
+                    fontSize: "1em",
+                    display: "inline-block",
+                    paddingLeft: "5px",
+                  }}
+                />
+              </div>
+              <span className={`${secondaryTextStyle} my-4  `}>
+                &emsp;&#60;&#47;h1&#62;
+              </span>
+            </div>
+            <span className={`${secondaryTextStyle} my-4 `}>
+              &emsp;&#60;form&#62;
+            </span>
+            <div className="flex flex-col my-4">
+              <form
+                action="https://getform.io/f/32ad80e6-3f6d-410f-8727-76a999806fcf"
+                method="POST"
+                encType="multipart/form-data"
+              >
+                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                  <div className="flex flex-col">
+                    <label className={labelStyle}>Name</label>
+                    <input className={inputStyle} type="text" name="name" />
+                  </div>
+                  <div className="flex flex-col">
+                    <label className={labelStyle}>Phone</label>
+                    <input className={inputStyle} type="text" name="phone" />
+                  </div>
+                </div>
+                <div className="flex flex-col py-2">
+                  <label className={labelStyle}>Email</label>
+                  <input className={inputStyle} type="email" name="email" />
+                </div>
+                <div className="flex flex-col py-2">
+                  <label className={labelStyle}>Subject</label>
+                  <input className={inputStyle} type="text" name="subject" />
+                </div>
+                <div className="flex flex-col py-2 ">
+                  <label className={labelStyle}>Message</label>
+                  <textarea
+                    className={inputStyle}
+                    name="message"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <button className="bg-orange-500 text-gray-900 font-semibold mt-4 w-full p-4 rounded-lg hover:text-white hover:bg-orange-600 transition">
+                  Send Message
+                </button>
+              </form>
+            </div>
+            <span className={`${secondaryTextStyle}  ml-5 mt-4 `}>
+              &#60;&#47;form&#62;
+            </span>
+            <br />
+            <span className={`${secondaryTextStyle}   `}>
+              &#60;&#47;div&#62;
+            </span>
           </div>
-          <div className="flex flex-col">
-            <label className="uppercase text-sm py-2 text-gray-300">
-              Phone
-            </label>
-            <input
-              className="border-2  rounded-lg p-3 flex border-gray-300"
-              type="text"
-              name="phone"
-            />
-          </div>
         </div>
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2 text-gray-300">Email</label>
-          <input
-            className="border-2  rounded-lg p-3 flex border-gray-300"
-            type="email"
-            name="email"
-          />
-        </div>
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2 text-gray-300">
-            Subject
-          </label>
-          <input
-            className="border-2  rounded-lg p-3 flex border-gray-300"
-            type="text"
-            name="subject"
-          />
-        </div>
-        <div className="flex flex-col py-2 ">
-          <label className="uppercase text-sm py-2 text-gray-300">
-            Message
-          </label>
-          <textarea
-            className="border-2 rounded-lg  p-3 border-gray-300"
-            name="message"
-            rows="10"
-          ></textarea>
-        </div>
-        <button className="bg-orange-500 text-gray-900 font-semibold mt-4 w-full p-4 rounded-lg">
-          Send Message
-        </button>
-      </form>
-      <p className="text-2xl text-gray-500 self-start pl-2">
-        &emsp;&#60;&#47;form&#62;
-      </p>
-      <p className="text-2xl text-gray-500 self-start pl-2">
-        &#60;&#47;div&#62;
-      </p>
+      </div>
     </div>
   );
 };
