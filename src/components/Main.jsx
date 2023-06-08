@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
-import MyImg from "../assets/background.jpg";
 import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HTML from "../assets/Images/html.svg";
+import CSS from "../assets/Images/css.svg";
+import JavaScript from "../assets/Images/javascript.svg";
+import ReactIcon from "../assets/Images/react.svg";
+import Tailwind from "../assets/Images/tailwind.svg";
 
 const Main = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
   const secondaryTextStyle = " text-2xl text-gray-500 font-semibold font-sans ";
+  const iconStyle =
+    "flex items-center justify-center w-[65px] h-[65px] rounded-full bg-zinc-700";
   return (
     <div data-aos="fade-right" id="main">
       <div className="w-[90%] lg:w-[65%] mx-auto">
@@ -53,7 +59,36 @@ const Main = () => {
                 &emsp;&#60;&#47;h2&#62;
               </span>
             </div>
-            <span className={`${secondaryTextStyle}   `}>
+
+            <span className={`${secondaryTextStyle} my-4 ml-6  `}>
+              &#60;div&#62;
+            </span>
+            <div className="flex flex-col px-[80px] items-center gap-[35px]">
+              <span className="text-2xl font-semibold text-white">
+                Tech Stack
+              </span>
+              <ul className="flex flex-wrap justify-center items-center gap-[20px]">
+                <li className={iconStyle}>
+                  <img className="w-[34px] h-[34px]" src={HTML} />
+                </li>
+                <li className={iconStyle}>
+                  <img className="w-[34px] h-[34px]" src={CSS} />
+                </li>
+                <li className={iconStyle}>
+                  <img className="w-[34px] h-[34px]" src={JavaScript} />
+                </li>
+                <li className={iconStyle}>
+                  <img className="w-[34px] h-[34px]" src={ReactIcon} />
+                </li>
+                <li className={iconStyle}>
+                  <img className="w-[34px] h-[34px]" src={Tailwind} />
+                </li>
+              </ul>
+            </div>
+            <span className={`${secondaryTextStyle} my-4 ml-6 `}>
+              &#60;&#47;div&#62;
+            </span>
+            <span className={`${secondaryTextStyle} my-4  `}>
               &#60;&#47;div&#62;
             </span>
           </div>
