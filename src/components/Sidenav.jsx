@@ -19,11 +19,15 @@ const Sidenav = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const listStyle =
+    "w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 hover:text-white ease-in duration-200";
+  const sideNavStyle =
+    " flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 hover:text-white ease-in duration-300";
   return (
     <div>
       <AiOutlineMenu
         onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] md:hidden  invert"
+        className="fixed top-4 right-4 z-[99] md:hidden text-xl text-orange-500"
       />
       {nav ? (
         <div
@@ -31,29 +35,17 @@ const Sidenav = () => {
           data-aos-anchor="#example-anchor"
           data-aos-offset="500"
           data-aos-duration="500"
-          className="fixed w-full h-screen bg-zinc-800 flex flex-col justify-center items-center z-20"
+          className="fixed top-0 bottom-0 right-0 left-0 w-full h-screen bg-zinc-800 flex flex-col justify-center items-center z-20"
         >
-          <a
-            onClick={handleNav}
-            href="#main"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
+          <a onClick={handleNav} href="#main" className={listStyle}>
             <AiOutlineHome size={20} />
             <span className="pl-4">Home</span>
           </a>
-          <a
-            onClick={handleNav}
-            href="#projects"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
+          <a onClick={handleNav} href="#projects" className={listStyle}>
             <GrProjects size={20} />
             <span className="pl-4">Projects</span>
           </a>
-          <a
-            onClick={handleNav}
-            href="#contact"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
+          <a onClick={handleNav} href="#contact" className={listStyle}>
             <AiOutlineMail size={20} />
             <span className="pl-4">Contact</span>
           </a>
@@ -62,7 +54,7 @@ const Sidenav = () => {
             href="https://github.com/Masoud-M"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            className={listStyle}
           >
             <AiOutlineGithub size={20} />
             <span className="pl-4">Github</span>
@@ -77,24 +69,15 @@ const Sidenav = () => {
         className="md:block hidden fixed top-[25%] z-10"
       >
         <div className="flex flex-col ">
-          <a
-            href="#main"
-            className=" flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
+          <a href="#main" className={sideNavStyle}>
             <AiOutlineHome size={20} />
             <span className="text-[10px]">Home</span>
           </a>
-          <a
-            href="#projects"
-            className=" flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
+          <a href="#projects" className={sideNavStyle}>
             <GrProjects size={20} />
             <span className="text-[10px]">Projects</span>
           </a>
-          <a
-            href="#contact"
-            className=" flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
+          <a href="#contact" className={sideNavStyle}>
             <AiOutlineMail size={20} />
             <span className="text-[10px]">Contact</span>
           </a>
@@ -102,7 +85,7 @@ const Sidenav = () => {
             href="https://github.com/Masoud-M"
             target="_blank"
             rel="noopener noreferrer"
-            className=" flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            className={sideNavStyle}
           >
             <AiOutlineGithub size={20} />
             <span className="text-[10px]">Github</span>
