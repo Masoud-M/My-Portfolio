@@ -3,12 +3,12 @@ import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Contact = () => {
+const Contact = ({ displayMode }) => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
   const secondaryTextStyle = " text-2xl text-gray-500 font-semibold font-sans ";
-  const labelStyle = "uppercase font-semibold text-sm py-2 text-gray-300";
+  const labelStyle = `${displayMode.secondaryText} uppercase font-semibold text-sm py-2 `;
   const inputStyle =
     "border-2 bg-zinc-300  rounded-lg p-3 flex border-gray-300";
   return (
@@ -23,7 +23,9 @@ const Contact = () => {
               <span className={`${secondaryTextStyle}   `}>
                 &emsp;&#60;h1&#62;
               </span>
-              <div className=" items-center justify-center my-4 flex sm:text-5xl text-4xl font-bold text-orange-500">
+              <div
+                className={`${displayMode.accentText} items-center justify-center my-4 flex sm:text-5xl text-4xl font-bold`}
+              >
                 <TypeAnimation
                   sequence={["Contact", 1000, " ", 1000]}
                   wrapper="span"
@@ -43,7 +45,7 @@ const Contact = () => {
             <span className={`${secondaryTextStyle} my-4 `}>
               &emsp;&#60;form&#62;
             </span>
-            <div className="flex flex-col my-4">
+            <div className="flex flex-col my-4 px-10">
               <form
                 action="https://getform.io/f/32ad80e6-3f6d-410f-8727-76a999806fcf"
                 method="POST"
@@ -75,7 +77,9 @@ const Contact = () => {
                     rows="10"
                   ></textarea>
                 </div>
-                <button className="bg-orange-500 text-gray-900 font-semibold mt-4 w-full p-4 rounded-lg hover:text-white hover:bg-orange-600 transition">
+                <button
+                  className={`${displayMode.accentColor}  font-semibold mt-4 w-full p-4 rounded-lg hover:text-white transition`}
+                >
                   Send Message
                 </button>
               </form>

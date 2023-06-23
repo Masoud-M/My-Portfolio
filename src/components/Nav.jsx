@@ -9,7 +9,7 @@ import { GrProjects } from "react-icons/gr";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Sidenav = () => {
+const Sidenav = ({ displayMode }) => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
@@ -21,8 +21,7 @@ const Sidenav = () => {
 
   const listStyle =
     "w-[75%] flex justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold  m-2 p-4 cursor-pointer hover:scale-110 hover:text-white ease-in duration-200";
-  const sideNavStyle =
-    " flex flex-col justify-center items-center rounded-full shadow-lg bg-orange-500 font-semibold m-2 p-4 cursor-pointer hover:scale-110 hover:text-white ease-in duration-300";
+  const sideNavStyle = `${displayMode.accentColor} ${displayMode.sideNavText} flex flex-col justify-center items-center rounded-md shadow-lg font-semibold py-2 w-[75%]  cursor-pointer hover:text-white ease-in duration-200 `;
   return (
     <div>
       <AiOutlineMenu
@@ -66,9 +65,9 @@ const Sidenav = () => {
 
       <div
         data-aos="fade-right"
-        className="md:block hidden fixed top-[25%] z-10"
+        className={`${displayMode.sideNavBg} md:block hidden fixed top-0 bottom-0 left-0 w-[100px] z-10 `}
       >
-        <div className="flex flex-col ">
+        <div className="flex flex-col h-full gap-4 justify-center items-center ">
           <a href="#main" className={sideNavStyle}>
             <AiOutlineHome size={20} />
             <span className="text-[10px]">Home</span>

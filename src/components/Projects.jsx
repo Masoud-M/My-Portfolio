@@ -5,7 +5,7 @@ import EcommerceImg from "../assets/ecommerce.png";
 import GymImg from "../assets/gym-website.png";
 import { TypeAnimation } from "react-type-animation";
 
-const Projects = () => {
+const Projects = ({ displayMode }) => {
   const secondaryTextStyle = " text-2xl text-gray-500 font-semibold font-sans ";
   return (
     <div id="projects" className="my-[100px]">
@@ -19,7 +19,9 @@ const Projects = () => {
               <span className={`${secondaryTextStyle}   `}>
                 &emsp;&#60;h1&#62;
               </span>
-              <div className=" items-center justify-center my-4 flex sm:text-5xl text-4xl font-bold text-orange-500">
+              <div
+                className={`${displayMode.accentText} items-center justify-center my-4 flex sm:text-5xl text-4xl font-bold`}
+              >
                 <TypeAnimation
                   sequence={["Projects", 1000, " ", 1000]}
                   wrapper="span"
@@ -42,6 +44,7 @@ const Projects = () => {
               </span>
               <div className="grid grid-cols-1 gap-12 w-[70%] mx-auto py-8">
                 <ProjectItem
+                  displayMode={displayMode}
                   img={CarRental}
                   title="Car Rental"
                   description="A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."
@@ -50,6 +53,7 @@ const Projects = () => {
                   demo="https://647eead214d0787e130c91b3--delicate-tiramisu-c6cc9e.netlify.app/"
                 />
                 <ProjectItem
+                  displayMode={displayMode}
                   img={GymImg}
                   title="Gym Website"
                   description="A gym website is a comprehensive resource for fitness information, class schedules, membership options, and tools to help users achieve their fitness goals."
@@ -58,6 +62,7 @@ const Projects = () => {
                   demo="https://fitclub-1my.pages.dev/"
                 />
                 <ProjectItem
+                  displayMode={displayMode}
                   img={EcommerceImg}
                   title="Ecommerce"
                   description="With a focus on simplicity and clean design, this store prioritize user experience, making it easy for customers to find and purchase the products they need."
