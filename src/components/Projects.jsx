@@ -3,6 +3,7 @@ import ProjectItem from "./ProjectItem";
 import CarRental from "../assets/car-rental.png";
 import EcommerceImg from "../assets/ecommerce.png";
 import GymImg from "../assets/gym-website.png";
+import SortingVisualizer from "../assets/sorting-visualizer.png";
 import { TypeAnimation } from "react-type-animation";
 
 const Projects = ({ displayMode }) => {
@@ -43,6 +44,15 @@ const Projects = ({ displayMode }) => {
                 &#60;div&#62;
               </span>
               <div className="grid grid-cols-1 gap-12 w-[70%] mx-auto py-8">
+                <ProjectItem
+                  displayMode={displayMode}
+                  img={SortingVisualizer}
+                  title="Sorting Visualizer"
+                  description="A way to show how different sorting algorithms work by slowing them down and visually showing the process, which you can set the side of the array and the sorting speed and choose between different algorithms"
+                  techStack={["React", "TypeScript", "Tailwind"]}
+                  srcLink="https://github.com/Masoud-M/car-rental"
+                  demo="https://teal-melba-fffa8e.netlify.app/"
+                />
                 <ProjectItem
                   displayMode={displayMode}
                   img={CarRental}
