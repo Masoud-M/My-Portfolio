@@ -45,13 +45,13 @@ const Contact = ({ displayMode }) => {
             <span className={`${secondaryTextStyle} my-4 `}>
               &emsp;&#60;form&#62;
             </span>
-            <div className="flex flex-col my-4 px-10">
+            <div className="flex flex-col px-10 my-4">
               <form
                 action="https://getform.io/f/32ad80e6-3f6d-410f-8727-76a999806fcf"
                 method="POST"
                 encType="multipart/form-data"
               >
-                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                <div className="grid w-full gap-4 py-2 md:grid-cols-2">
                   <div className="flex flex-col">
                     <label className={labelStyle}>Name</label>
                     <input className={inputStyle} type="text" name="name" />
@@ -78,7 +78,7 @@ const Contact = ({ displayMode }) => {
                   ></textarea>
                 </div>
                 <button
-                  className={`${displayMode.accentColor}  font-semibold mt-4 w-full p-4 rounded-lg hover:text-white transition`}
+                  className={`${displayMode.accentColor}  font-semibold w-full mt-4  p-4 rounded-lg hover:text-white transition`}
                 >
                   Send Message
                 </button>
